@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="34R-rd-p0J">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="KRE-Qd-RX5">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="34R-rd-p0J" customClass="ViewController" customModule="AnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M2E-Xa-TeF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RcA-um-xHg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guv-9N-LyL">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.30588235289999999" green="0.30588235289999999" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="guv-9N-LyL" secondAttribute="bottom" id="0Fg-Ng-rHY"/>
+                                    <constraint firstAttribute="height" constant="110" id="1dK-nq-qYR"/>
+                                    <constraint firstItem="guv-9N-LyL" firstAttribute="top" secondItem="RcA-um-xHg" secondAttribute="top" id="5ux-Zy-ryo"/>
+                                    <constraint firstAttribute="trailing" secondItem="guv-9N-LyL" secondAttribute="trailing" id="PmS-ZV-AOW"/>
+                                    <constraint firstItem="guv-9N-LyL" firstAttribute="leading" secondItem="RcA-um-xHg" secondAttribute="leading" id="o4N-Pb-Jbs"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NiP-Hh-qQ9">
+                                <rect key="frame" x="0.0" y="110" width="414" height="752"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLB-kG-PFr">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="752"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTK-8s-Ons">
+                                                <rect key="frame" x="41.5" y="210.5" width="331" height="331"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="bTK-8s-Ons" secondAttribute="height" multiplier="1:1" id="l0s-OP-1O4"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfi-Pp-mpM">
+                                                <rect key="frame" x="0.0" y="682" width="414" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Tfi-Pp-mpM" secondAttribute="height" multiplier="414:70" id="Sn1-uy-8B2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Proceed to EMI">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="detail01"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnConvertToEmiTapped:" destination="34R-rd-p0J" eventType="touchUpInside" id="WYt-GJ-ivE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="990" constant="70" id="1Up-43-bXX"/>
+                                            <constraint firstItem="Tfi-Pp-mpM" firstAttribute="leading" secondItem="WLB-kG-PFr" secondAttribute="leading" id="28z-rC-mtS"/>
+                                            <constraint firstAttribute="trailing" secondItem="Tfi-Pp-mpM" secondAttribute="trailing" id="3hI-2a-pHP"/>
+                                            <constraint firstItem="bTK-8s-Ons" firstAttribute="centerY" secondItem="WLB-kG-PFr" secondAttribute="centerY" id="I8P-rm-oLA"/>
+                                            <constraint firstItem="bTK-8s-Ons" firstAttribute="width" secondItem="WLB-kG-PFr" secondAttribute="width" multiplier="0.8" id="NMp-2x-jl9"/>
+                                            <constraint firstAttribute="bottom" secondItem="Tfi-Pp-mpM" secondAttribute="bottom" id="cQs-Yt-F27"/>
+                                            <constraint firstItem="bTK-8s-Ons" firstAttribute="centerX" secondItem="WLB-kG-PFr" secondAttribute="centerX" id="q5r-cj-yh1"/>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OrH-x9-6m9">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4av-D4-AFH">
+                                                <rect key="frame" x="0.0" y="-70" width="414" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="4av-D4-AFH" secondAttribute="height" multiplier="414:70" id="cN0-aL-B2Y"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Proceed to EMI">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="detail01"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnConvertToEmiTapped:" destination="34R-rd-p0J" eventType="touchUpInside" id="Onu-ga-UDq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="4av-D4-AFH" secondAttribute="bottom" id="A56-oq-cyt"/>
+                                            <constraint firstItem="4av-D4-AFH" firstAttribute="leading" secondItem="OrH-x9-6m9" secondAttribute="leading" id="AUl-yn-Er6"/>
+                                            <constraint firstAttribute="height" priority="990" constant="70" id="Zzc-zy-cPX"/>
+                                            <constraint firstAttribute="trailing" secondItem="4av-D4-AFH" secondAttribute="trailing" id="nBe-Cd-P37"/>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eli-Yd-cy7">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVr-55-VFx">
+                                                <rect key="frame" x="0.0" y="-70" width="414" height="70"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ZVr-55-VFx" secondAttribute="height" multiplier="414:70" id="dRR-Rq-nOZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Proceed to EMI">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="detail01"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnConvertToEmiTapped:" destination="34R-rd-p0J" eventType="touchUpInside" id="Tmw-nw-45S"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ZVr-55-VFx" firstAttribute="leading" secondItem="eli-Yd-cy7" secondAttribute="leading" id="MDy-kF-p7M"/>
+                                            <constraint firstAttribute="height" priority="990" constant="70" id="VgG-Ro-vNS"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZVr-55-VFx" secondAttribute="bottom" id="WHz-Va-sIf"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZVr-55-VFx" secondAttribute="trailing" id="ct7-m9-A0b"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E7i-QB-UD0"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RcA-um-xHg" firstAttribute="top" secondItem="M2E-Xa-TeF" secondAttribute="top" id="7rt-DZ-xRr"/>
+                            <constraint firstItem="RcA-um-xHg" firstAttribute="leading" secondItem="E7i-QB-UD0" secondAttribute="leading" id="IkT-Ii-Fjl"/>
+                            <constraint firstItem="E7i-QB-UD0" firstAttribute="trailing" secondItem="NiP-Hh-qQ9" secondAttribute="trailing" id="T9l-dK-8UM"/>
+                            <constraint firstItem="RcA-um-xHg" firstAttribute="trailing" secondItem="E7i-QB-UD0" secondAttribute="trailing" id="TsX-B9-afC"/>
+                            <constraint firstItem="NiP-Hh-qQ9" firstAttribute="leading" secondItem="E7i-QB-UD0" secondAttribute="leading" id="fs5-O8-E9J"/>
+                            <constraint firstItem="E7i-QB-UD0" firstAttribute="bottom" secondItem="NiP-Hh-qQ9" secondAttribute="bottom" id="gDD-a9-dcK"/>
+                            <constraint firstItem="NiP-Hh-qQ9" firstAttribute="top" secondItem="RcA-um-xHg" secondAttribute="bottom" id="sfY-XI-Db1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstView" destination="WLB-kG-PFr" id="2IS-dQ-faT"/>
+                        <outlet property="heightConstFirstView" destination="1Up-43-bXX" id="4RG-7X-Rbt"/>
+                        <outlet property="heightConstSecondView" destination="Zzc-zy-cPX" id="91w-f6-YVr"/>
+                        <outlet property="heightConstThirdView" destination="VgG-Ro-vNS" id="mIR-C8-M7r"/>
+                        <outlet property="secondView" destination="OrH-x9-6m9" id="Tkn-QN-R5K"/>
+                        <outlet property="thirdView" destination="eli-Yd-cy7" id="MmM-3T-Q0E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qut-JJ-UXP" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1.4492753623188408" y="-246.42857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
